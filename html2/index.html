@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesOne</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    
+   <h1 style="margin-left: 30px;"><b>Обнови тінь зміниться :)</b></h1>
+    <div id="div" class="dig"> </div>
+    
+    
+    
+    
+    
+    
+    <p class="par"></p>
+    <p class="rama">
+        Цей блок являється параграфом з рамкою.<br>
+        Цей блок являється параграфом з рамкою.<br>
+        Цей блок являється параграфом з рамкою.<br>
+        Цей блок являється параграфом з рамкою.<br>
+        Цей блок являється параграфом з рамкою.
+      
+   
+    </p>
+
+<div class="veryBig">
+<p class="pow color1">Your name</p>
+<p class="pow color2">Your name</p>
+<p class="pow color3">Your name</p>
+<p class="pow color4">Your name</p>
+
+
+
+
+</div>
+
+
+
+   <script>
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);};
+let ram = getRandomArbitrary(1,20);
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);};
+let rum = getRandomArbitrary(1,20);
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);};
+let rom = getRandomArbitrary(1,20);
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);};
+let rim = getRandomArbitrary(1,20);
+
+
+       let arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P',
+       'Q','R','S','T','U','V','W','X','Y','Z'];
+       
+   function getListContent() {
+     let fragment = new DocumentFragment();
+     for(let i=0; i<=5; i++) {
+       let div = document.createElement('div');
+       div.append(arr[i]);
+       fragment.append(div);
+       div.className = "klava";
+       div.style.boxShadow=`${ram}px ${rum}px ${rom}px ${rim}px`;
+       
+     }
+   
+     return fragment;
+   }
+   
+   div.append(getListContent()); 
+   </script>
+    
+
+</body>
+</html>

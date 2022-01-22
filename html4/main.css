@@ -1,0 +1,207 @@
+body{
+    display: flex;
+}
+.big{
+    width: 600px;
+    height: 1800px;
+    border: 1px solid black;
+}
+.w600{
+    width: 600px;
+}
+.h1300{
+    height: 1300px;
+}
+.h100{
+    height: 100px;
+}
+.h400{
+    height: 400px;
+}
+.h250{
+    height: 250px;
+}
+.mr5{
+    margin: 5px;
+}
+
+.w250{
+    width: 250px;
+}
+.h600{
+    height: 600px;
+}
+.h300{
+    height: 300px;
+}
+.h30{
+    height: 30px;
+}
+
+.h500{
+    height: 500px;
+}
+
+.w100{
+    width: 100px;
+}
+.br-slvr{
+    background: darkgray;
+}
+.br-db{
+    background: rgb(16, 13, 63);
+}
+.br-prp{
+    background: slateblue;
+}
+.brd-10{
+    border-radius: 10px;
+}
+.brd-20{
+    border-radius: 20px;
+}
+
+.colortx{
+    color: slateblue;
+}
+.h200{
+    height: 200px;
+}
+.arou{
+    justify-content: space-around;
+}
+.h150{
+    height: 150px;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.w150{
+    width: 150px;
+}
+.w200{
+    width: 200px;
+}
+
+.w120{
+    width: 120px;
+}
+.w400{
+    width: 400px;
+}
+.w50{
+    width: 50px;
+}
+.h50{
+    height: 50px;
+}
+.brd-50{
+    border-radius: 50px;
+}
+
+.flex{
+    display: flex;
+}
+.beet{
+    justify-content: space-between;
+    align-items: center;
+}
+.cntr{
+align-items: center;
+justify-content: center;
+}
+.w350{
+    width: 350px;
+}
+
+.al-it{
+    align-items: center;
+}
+.column{
+    flex-direction: column;
+}
+.jc{
+    justify-content: center;
+}
+
+.h90{
+    height: 90px;
+}
+.pd0{
+    padding: 0px;
+}
+.w90{
+    width: 90px;
+}
+.mr0{
+    margin: 0;
+}
+.rev{
+    flex-direction: row-reverse;
+}
+.mr10{
+    margin: 10px;
+}
+.mr7{
+    margin: 7px;
+}
+.w500{
+    width: 500px;
+}
+.w300{
+    width: 300px;
+}
+.mrt20{
+    margin-top: 20px;
+}
+.w120{
+    width: 120px;
+}
+.fsz11{
+    font-size: 11px;
+}
+.fsz50{
+    font-size: 50px;
+}
+.brtx-prp{	
+	background-color:slateblue;
+	/* box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5); */
+	/* padding: 0 10px 0 0; */
+	color:rgb(255, 255, 255);
+	/* line-height: 14px; */
+}
+.color{
+    color:snow;
+}
+.fsz30{
+    font-size: 30px;
+}
+
+.w20{
+    width: 20px;
+}
+.h20{
+    height: 20px;
+}
+.mrt-75{
+    margin-top: 75px;
+}
+.mrb0{
+    margin-bottom: 0px;
+}
+.mr50{
+margin: 50px;
+}
+.mrt0{
+    margin-top: 0px;
+}
+.h30{
+    height: 30px;
+}
+.w30{
+    width: 30px;
+}
+.pos{
+    position: relative;
+    top: 90px;
+}
