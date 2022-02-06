@@ -11,14 +11,14 @@
 // - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
 //     Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
 
- let a = +prompt('number 1')
- let b = +prompt('number 2')
- let c = +prompt('number 3')
-
-
-if((b<a && a<c) || (c<a && a<b)) console.log(a);
-if((a<b && b<c) || (c<b && b<a)) console.log(b);
-if((a<c && c<b) || (b<c && c<a)) console.log(c);
+//  let a = +prompt('number 1')
+//  let b = +prompt('number 2')
+//  let c = +prompt('number 3')
+//
+//
+// if((b<a && a<c) || (c<a && a<b)) console.log(a);
+// if((a<b && b<c) || (c<b && b<a)) console.log(b);
+// if((a<c && c<b) || (b<c && c<a)) console.log(c);
 
 // - Перепишіть конструкцію if з використанням умовного оператора '?':
 // let result;
@@ -35,3 +35,4 @@ if((a<c && c<b) || (b<c && c<a)) console.log(c);
 
 // let ac = prompt(' число')
 // let abc = ac<0? console.log('Негативне число'): ac>0? console.log('Позитивне число'): console.log('число 0')
+
