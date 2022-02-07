@@ -111,7 +111,7 @@ for (const product of products) {
         <h3 class="product-title">
         TITLE - ${product.title}</br>
         Price - ${product.price}</h3>
-        <img src="${product.image}" alt="" class="product-image">
+        <img src="${product.image}" alt="product" class="product-image">
     </div> `)
 }
 

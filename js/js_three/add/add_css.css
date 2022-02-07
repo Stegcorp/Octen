@@ -1,0 +1,22 @@
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+.post-card{
+    width: 19%;
+    border: 1px solid silver;
+}
+.users-box{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+    margin-top: 20px;
+}
+.user-block{
+    width: 49%;
+    border: 1px solid silver;
+
+}
