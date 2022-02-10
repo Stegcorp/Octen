@@ -92,5 +92,12 @@
 // random(100)
 // console.log(arr)
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
-// let reve = (x)=> x.reverse();
-// console.log(reve([1,2,3]))
+// let ars = [1,2,3]
+// let reve = (x)=>{
+//     let arr = [];
+//     for (let i = x.length-1; i >=0; i--) {
+//        arr.push(x[i])
+//     }
+//     return arr
+// };
+// console.log(reve(ars))
