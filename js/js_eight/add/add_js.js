@@ -4,13 +4,14 @@
 function classes(enterElement) {
     // console.log(enterElement);
     let ars =enterElement.getAttribute('class')
-if (enterElement.getAttribute('class'))array.push(ars)
+if (enterElement.getAttribute('class')) array.push(ars)
     let children = enterElement.children;
     for (const child of children) {
         classes(child)
     }
 }
 classes(document.body)
+
 let arr = []
 for (const arrayElement of array) {
  let aa =  arrayElement.split(' ')

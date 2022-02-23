@@ -44,6 +44,8 @@
 //     }
 // }
 // document.write(delete_characters(str,6))
+// let delete_characters = (str, length)=> str.substr(0,length)
+// console.log(delete_characters(str,7))
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами.
 // При цьому всі символи рядка необхідно перевести у верхній регістр.
 //     let str = "HTML JavaScript PHP";
