@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let favirit =JSON.parse(localStorage.getItem('favorites'))
+    for (const favElem of favirit) {
+        let doss = document.createElement('div')
+        doss.innerText= `name -`+favElem.name + `  age - `+favElem.age +` status - `+favElem.status
+        document.body.appendChild(doss)
+    }
+</script>
+</body>
+</html>
