@@ -1,0 +1,11 @@
+.super{
+    border: 1px solid darkcyan;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #fc2176;
+}
+.show{
+    display: none;
+}

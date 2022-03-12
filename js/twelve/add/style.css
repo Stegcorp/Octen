@@ -1,0 +1,21 @@
+.user{
+    border: 1px solid red;
+    width: 28%;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+    width: 28%;
+}
+.inPost{
+    border: 1px solid green;
+}
+.body{
+    display: flex;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+.yellow{
+    border: 1px solid yellow;
+}
