@@ -16,7 +16,7 @@ let goods = JSON.parse(localStorage.getItem('goods')) ||[]
 form.onsubmit = function (e){
     e.preventDefault()
 
-    goods.push({id:goods.length ,name:form.nameGoods.value,number:form.number.value,price:form.price.value,image:form.image.value})
+    goods.push({name:form.nameGoods.value,number:form.number.value,price:form.price.value,image:form.image.value})
 
 localStorage.setItem('goods',JSON.stringify(goods))
 console.log(goods)
