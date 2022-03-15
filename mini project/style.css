@@ -1,0 +1,93 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index {
+    width: 45%;
+    margin: 10px;
+}
+
+.btn {
+    width: 90%;
+    border-radius: 10px;
+    background: royalblue;
+    color: #e8dd17;
+    margin: 10px;
+}
+
+.btn_main {
+    border-radius: 10px;
+    background: #51CEBC;
+    color: #e8dd17;
+    width: 50px;
+}
+
+.flex {
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    background: #f1b874;
+}
+
+.userDef {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inMain {
+    width: 100%;
+}
+
+.title {
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.postDiv {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.bottom {
+    border-radius: 10px;
+    background: #e8dd17;
+    color: darkcyan;
+}
+
+.postDiv1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+}
+
+.poster {
+    width: 70%;
+}
+.commentDiv{
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.comi {
+    width: 23%;
+    border: 2px solid sandybrown;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #dee09d;
+}
+.textCenter{
+    display: flex;
+    justify-content: center;
+}

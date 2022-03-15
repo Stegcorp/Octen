@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello</h1>
+<img src="">
+<script>
+    let goods = localStorage.getItem('goods')
+    let goodsJson = JSON.parse(goods)
+    let div = document.createElement('div')
+    let botton = document.createElement('button')
+    botton.innerHTML = `<b>all delite</b>`
+    botton.onclick= function (e){
+        div.innerText = ''
+        localStorage.clear()
+    }
+    document.body.append(div,botton)
+    for (const divElement of goodsJson) {
+        let goodses = document.createElement('div')
+        goodses.innerHTML = `name:${divElement.name}</br>
+                             number:${divElement.number}</br>
+                             price:${divElement.price}</br>`
+        let image = document.createElement('img')
+        image.src = divElement.image
+        image.style.width='200px'
+        goodses.style.border= '1px solid red'
+        let btn = document.createElement('button')
+        btn.style.background='red'
+        btn.style.color='white'
+        btn.innerHTML = `<b>delite</b>`
+        btn.onclick =function (e) {
+            goodses.innerText = ''
+            goodses.style.border= '0px solid red'
+            goodsJson.shift(divElement)
+            localStorage.clear()
+            localStorage.setItem('goods',JSON.stringify(goodsJson))
+        }
+        goodses.append(image,btn)
+        div.appendChild(goodses)
+    }
+
+</script>
+</body>
+</html>

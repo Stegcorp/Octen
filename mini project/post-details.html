@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(response => response.json())
+        .then(responseData => {
+            let data = responseData
+            let postDiv1 = document.createElement('div')
+            postDiv1.innerHTML = `<h2>User post</h2>`
+            postDiv1.classList.add('postDiv1')
+            let post = JSON.parse(localStorage.getItem('posts'))
+            for (const postTitle of data) {
+                if (post[0].id===postTitle.id) {
+                    let divaN = document.createElement('div')
+                    divaN.classList.add('poster')
+                    for (const divaNKey in postTitle) {
+                        let inti = document.createElement('div')
+                        inti.innerHTML = `<b>${divaNKey}</b> - ${postTitle[divaNKey]}`
+                        divaN.appendChild(inti)
+                    }
+                    postDiv1.appendChild(divaN)
+                }
+            }
+            document.body.append(postDiv1)
+        })
+    fetch("https://jsonplaceholder.typicode.com/comments")
+        .then(response => response.json())
+        .then(responseData => {
+            let comments = responseData
+            let commentDiv = document.createElement('div')
+            commentDiv.classList.add('commentDiv')
+            commentDiv.classList.add('main')
+            let post = JSON.parse(localStorage.getItem('posts'))
+            for (const comt of comments)
+                if (post[0].id === comt.postId) {
+                    let comi = document.createElement('div')
+                    let comCont = document.createElement("div")
+                    comCont.classList.add('textCenter')
+                    comi.appendChild(comCont)
+                    comCont.innerHTML = `<b>COMMENT</b>`
+                    comi.classList.add('comi')
+                    for (const comtKey in comt) {
+                        let comm = document.createElement('div')
+                        comm.classList.add('comment')
+                        comm.innerHTML = `<b>${comtKey}</b> - ${comt[comtKey]}`
+                        comi.append(comm)
+                    }
+                    commentDiv.appendChild(comi)
+                }
+            document.body.append(commentDiv)
+        })
+</script>
+</body>
+</html>
