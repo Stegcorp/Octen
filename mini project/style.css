@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100px;
+    height: 140px;
 }
 
 .postDiv {
@@ -90,4 +90,13 @@
 .textCenter{
     display: flex;
     justify-content: center;
+}
+.geo{
+    display: flex;
+    column-gap: 10px;
+}
+.column{
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 13px;
 }

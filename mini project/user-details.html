@@ -40,9 +40,9 @@
                                         botton.classList.add('bottom')
                                         botton.innerText = 'post-details'
                                         botton.onclick = function (e) {
-                                            postsJS=[]
-                                            postsJS.push({id:postElem.userId})
-                                            localStorage.setItem('posts',JSON.stringify(postsJS))
+                                            postsJS = []
+                                            postsJS.push({id: postElem.userId})
+                                            localStorage.setItem('posts', JSON.stringify(postsJS))
                                             location.href = 'post-details.html'
                                         }
                                         title.appendChild(botton)
@@ -56,30 +56,43 @@
                         let divUser = document.createElement('div')
                         divUser.innerHTML = `<b>${key}</b> - ${user[key]}`
                         if (key === 'address') {
-                            divUser.innerHTML = `<b>${key}</b> - `
+                            divUser.classList.add('geo')
+                            divUser.innerHTML = `<b>${key}  - </b> `
+                            let addrresDiv = document.createElement('div')
+                            divUser.appendChild(addrresDiv)
+                            addrresDiv.classList.add('column')
                             for (const divUserKey in user.address) {
-                                let li = document.createElement('li')
+                                let li = document.createElement('div')
                                 li.innerHTML = `<b>${divUserKey}</b>  -  ${user.address[divUserKey]}`
                                 if (divUserKey === 'geo') {
-                                    li.innerHTML = `<b>${divUserKey}</b>  - `
-                                    let lo = document.createElement('lo')
-                                    lo.innerHTML = `<b>lat</b> - ${user.address[divUserKey].lat}</br>
-                                                    <b>lng</b> - ${user.address[divUserKey].lng}`
-                                    li.append(lo)
+                                    li.classList.add('geo')
+                                    li.innerHTML = `<b>${divUserKey} - </b>   `
+                                    let geo = document.createElement('div')
+                                    geo.classList.add('column')
+                                    let lat = document.createElement('div')
+                                    let lng = document.createElement('div')
+                                    lat.innerHTML = `<b>lat    - </b>` + user.address[divUserKey].lat
+                                    lng.innerHTML = `<b>lng    - </b>` + user.address[divUserKey].lng
+                                    geo.append(lat, lng)
+                                    li.append(geo)
                                 }
-                                divUser.append(li)
+                                addrresDiv.append(li)
                             }
                         }
                         if (key === 'company') {
-                            divUser.innerHTML = `<b>${key}</b> - `
+                            divUser.classList.add('geo')
+                            divUser.innerHTML = `<b>${key} - </b>  `
+                            let divClass = document.createElement('div')
+                            divClass.classList.add('column')
+                            divUser.appendChild(divClass)
                             for (const divUserKey in user.company) {
-                                let li = document.createElement('li')
+                                let li = document.createElement('div')
                                 li.innerHTML = `<b>${divUserKey}</b>  -  ${user.company[divUserKey]}`
-                                divUser.append(li)
+                                divClass.append(li)
                             }
                         }
                         inMain.appendChild(divUser)
-                        main.append(inMain,btn)
+                        main.append(inMain, btn)
                     }
                 }
             }
