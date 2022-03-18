@@ -233,58 +233,58 @@ let usersList = [
 
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість,
 //     та властивості внутрішніх об'єктів створити свої окремі блок.
-// for (const usersListElement of usersList) {
-//     let divAn = document.createElement('div')
-//     let id = document.createElement('div')
-//     let nameMain = document.createElement('div')
-//     let username = document.createElement('div')
-//     let email = document.createElement('div')
-//     let addres = document.createElement('div')
-//     let phone = document.createElement('div')
-//     let website = document.createElement('div')
-//     let company = document.createElement('div')
-//     id.innerText = 'id -'+' '+ usersListElement.id;
-//     nameMain.innerText = 'name -'+' '+ usersListElement.name;
-//     username.innerText = 'username  -' + usersListElement.username;
-//     email.innerText = 'email  -'+ usersListElement.email;
-//     addres.innerText = 'addres  -'
-//     company.innerText = 'company  -'
-//     phone.innerText = 'phone  -' + usersListElement.phone;
-//     website.innerText = 'website  -' +usersListElement.website;
-//
-//         let street = document.createElement('li')
-//         let suite = document.createElement('li')
-//         let city = document.createElement('li')
-//         let zipcode = document.createElement('li')
-//         let geo = document.createElement('div')
-//         street.innerText = usersListElement.address.street
-//         suite.innerText = usersListElement.address.suite
-//         city.innerText = usersListElement.address.city
-//         zipcode.innerText = usersListElement.address.zipcode
-//         geo.innerText = 'geo   - '
-//         for (const streetElement in usersListElement.address.geo) {
-//             let geleos = document.createElement("li")
-//             geleos.innerText = usersListElement.address.geo[streetElement]
-//             geo.append(geleos)
-//             console.log(geleos)
-//         }
-//         // street.innerText =usersListElement.address[companyElement]
-//         addres.append(street,suite,city,zipcode,geo)
-//
-//
-//     for (const companyElement in usersListElement.company) {
-//         let nameC = document.createElement('li')
-//         nameC.innerText = usersListElement.company[companyElement]
-//         company.appendChild(nameC)
-//     }
-//     divAn.append(id,nameMain,username,email,addres,website,phone,company)
-//     document.body.appendChild(divAn)
-//     divAn.classList.add('stylePlus')
-//     let plusStyle = document.getElementsByClassName('stylePlus')
-// for (const usersListElement of plusStyle) {
-//     usersListElement.style.border = '1px solid blue'
-// }
-// }
+for (const usersListElement of usersList) {
+    let divAn = document.createElement('div')
+    let id = document.createElement('div')
+    let nameMain = document.createElement('div')
+    let username = document.createElement('div')
+    let email = document.createElement('div')
+    let addres = document.createElement('div')
+    let phone = document.createElement('div')
+    let website = document.createElement('div')
+    let company = document.createElement('div')
+    id.innerText = 'id -'+' '+ usersListElement.id;
+    nameMain.innerText = 'name -'+' '+ usersListElement.name;
+    username.innerText = 'username  -' + usersListElement.username;
+    email.innerText = 'email  -'+ usersListElement.email;
+    addres.innerText = 'addres  -'
+    company.innerText = 'company  -'
+    phone.innerText = 'phone  -' + usersListElement.phone;
+    website.innerText = 'website  -' +usersListElement.website;
+
+        let street = document.createElement('li')
+        let suite = document.createElement('li')
+        let city = document.createElement('li')
+        let zipcode = document.createElement('li')
+        let geo = document.createElement('div')
+        street.innerText = usersListElement.address.street
+        suite.innerText = usersListElement.address.suite
+        city.innerText = usersListElement.address.city
+        zipcode.innerText = usersListElement.address.zipcode
+        geo.innerText = 'geo   - '
+        for (const streetElement in usersListElement.address.geo) {
+            let geleos = document.createElement("li")
+            geleos.innerText = usersListElement.address.geo[streetElement]
+            geo.append(geleos)
+            console.log(geleos)
+        }
+        // street.innerText =usersListElement.address[companyElement]
+        addres.append(street,suite,city,zipcode,geo)
+
+
+    for (const companyElement in usersListElement.company) {
+        let nameC = document.createElement('li')
+        nameC.innerText = usersListElement.company[companyElement]
+        company.appendChild(nameC)
+    }
+    divAn.append(id,nameMain,username,email,addres,website,phone,company)
+    document.body.appendChild(divAn)
+    divAn.classList.add('stylePlus')
+    let plusStyle = document.getElementsByClassName('stylePlus')
+for (const usersListElement of plusStyle) {
+    usersListElement.style.border = '1px solid blue'
+}
+}
 // for (const usersListElement of usersList) {
 //     let main = document.createElement("div")   /// test
 //     document.body.append(main)

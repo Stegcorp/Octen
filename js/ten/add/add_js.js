@@ -36,42 +36,60 @@ let usersWithAddress = [
 // 2й - оставляет старше 29 лет включительно
 // 3й - оставляет тех у кого город киев
 // Данные выводить в документ
-let checkOne = document.createElement('input')
-let checkTwo = document.createElement('input')
-let checkThre = document.createElement('input')
-let form = document.createElement('form')
-checkOne.type = 'checkbox'
-checkTwo.type = 'checkbox'
-checkThre.type = 'checkbox'
-form.append(checkOne, checkTwo, checkThre)
-document.body.append(form)
-form.onclick = function (e) {
-    let array = [];
-    if (checkOne.checked) {
-        let filter = usersWithAddress.filter(value => !value.status);
+let array = [];
+let form = document.getElementById('shans')
+let chbx1 = document.getElementById('falsed')
+let chbx2 = document.getElementById('age')
+let chbx3 = document.getElementById('kyiv')
+let result = document.getElementById('results')
+let filter = usersWithAddress.filter(value => !value.status);
+let filter1 = usersWithAddress.filter(value => value.age > 29);
+let filter2 = usersWithAddress.filter(value => value.address.city === 'Kyiv');
+
+chbx1.onclick = function (e) {
+    result.innerText = ''
+    // let filter = usersWithAddress.filter(value => !value.status);
+    if (chbx1.checked) {
         array.push(filter)
+    }else {
+        result.innerText = ''
     }
-    if (checkTwo.checked) {
-        let filter1 = usersWithAddress.filter(value => value.age > 29);
+    myFunction()
+}
+chbx2.onclick = function (e) {
+    result.innerText = ''
+    myFunction()
+    if (chbx2.checked && chbx1.checked) {
+        let filterwok = array.filter(value => value.age > 29);
+        array.push(filterwok)
+    }else {
         array.push(filter1)
     }
-    if (checkThre.checked) {
-        let filter2 = usersWithAddress.filter(value => value.address.city === 'Kyiv');
+}
+chbx3.onclick = function (e) {
+    result.innerText = ''
+    myFunction()
+    if (chbx3.checked && chbx2.checked && chbx1.checked) {
+        let filter2 = array.filter(value => value.address.city === 'Kyiv');
         array.push(filter2)
-    }
-    for (const arrayElement of array) {
-        for (const arrayElementKey in arrayElement) {
-
-            let div = document.createElement("div")
-            div.innerText = `name  - ${arrayElement[arrayElementKey].name} age - ${arrayElement[arrayElementKey].age} status - ${arrayElement[arrayElementKey].status} city - ${arrayElement[arrayElementKey].address.city}`
-            div.style.width = '100%'
-            document.body.append(div)
-        }
+    }else {
+        array.push(filter2)
     }
 }
 
-//
-//
+function myFunction() {
+    for (const arrayElement of array) {
+        for (const arrayElementKey in arrayElement) {
+            let div = document.createElement("div")
+            div.innerText = `name  - ${arrayElement[arrayElementKey].name} age - ${arrayElement[arrayElementKey].age} status - ${arrayElement[arrayElementKey].status} city - ${arrayElement[arrayElementKey].address.city}`
+            div.style.border = '1px solid blue'
+            result.append(div)
+        }
+    }
+}
+console.log(array)
+
+
 // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .
 // Функция создает в боди 2 кнопки (назад/вперед)
 // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед",
@@ -85,3 +103,74 @@ form.onclick = function (e) {
 //
 //     Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
 // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+// const form = document.createElement('form');
+// form.setAttribute('name', 'formChBoxes')
+// document.body.appendChild(form);
+//
+// let chBox0 = document.createElement('input');
+// chBox0.type = 'checkbox'
+// chBox0.id = 'chBox0'
+// let label0 = document.createElement('label');
+// label0.htmlFor = 'chBox0';
+// label0.innerText = 'all: ';
+// label0.style.display = 'block';
+// label0.appendChild(chBox0);
+//
+// let chBox1 = document.createElement('input');
+// chBox1.type = 'checkbox'
+// chBox1.id = 'chBox1'
+// let label1 = document.createElement('label');
+// label1.htmlFor = 'chBox1';
+// label1.innerText = 'status false: ';
+// label1.style.display = 'block';
+// label1.appendChild(chBox1);
+//
+// let chBox2 = document.createElement('input');
+// chBox2.type = 'checkbox'
+// chBox2.id = 'chBox2'
+// let label2 = document.createElement('label');
+// label2.htmlFor = 'chBox2';
+// label2.innerText = 'age 29+: ';
+// label2.style.display = 'block';
+// label2.appendChild(chBox2);
+//
+// let chBox3 = document.createElement('input');
+// chBox3.type = 'checkbox'
+// chBox3.id = 'chBox3'
+// let label3 = document.createElement('label');
+// label3.htmlFor = 'chBox3';
+// label3.innerText = 'city Kyiv: ';
+// label3.style.display = 'block';
+// label3.appendChild(chBox3);
+//
+// document.forms.formChBoxes.onsubmit = e => e.preventDefault()
+// document.forms.formChBoxes.append(label0, label1, label2, label3,);
+//
+// let divMain = document.createElement('div');
+// document.body.appendChild(divMain);
+//
+// form.onclick = _ => {
+//     let users = usersWithAddress;
+//
+//     if (chBox1.checked) {
+//         users = users.filter(v => !v.status);
+//     }
+//     if (chBox2.checked) {
+//         users = users.filter(v => v.age >= 29);
+//     }
+//     if (chBox3.checked) {
+//         users = users.filter(v => v.address.city === 'Kyiv');
+//     }
+//
+//     while (divMain.firstElementChild) {
+//         divMain.removeChild(divMain.firstChild);
+//     }
+//
+//     users.forEach(item => {
+//         let div = document.createElement('div');
+//         div.style.border = '1px solid silver'
+//         div.innerText = `id: ${item.id}, name: ${item.name}, age: ${item.age}, status: ${item.status}, address:
+//         city: ${item.address.city}, street: ${item.address.street}, number: ${item.address.number}.`
+//         divMain.appendChild(div);
+//     });
+// };
